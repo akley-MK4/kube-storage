@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: data-nsp-nfs-server-provisioner-0
+  labels:
+    type: local
+  annotations: {}
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: manual
+  volumeMode: Filesystem
+  volumeName: "data-nsp-nfs-server-provisioner-0"
