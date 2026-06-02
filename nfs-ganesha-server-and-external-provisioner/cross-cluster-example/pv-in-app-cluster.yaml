@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: test-app
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 172.0.3.3
+    # This path is the remote PV path in NFS
+    path: /export/pvc-9d05264c-a3a5-45cf-b653-64c16793b6d7
+  mountOptions:
+    - nfsvers=4.1
+    - port=31291
