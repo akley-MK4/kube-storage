@@ -53,3 +53,6 @@ helm upgrade nsp nfs-ganesha-server-and-external-provisioner/nfs-server-provisio
 
 ### Uninstall
 helm uninstall nsp -n nfs-server-provisioner
+
+### Cross cluster usage
+Examples in the reference directory 'cross-cluster-example'

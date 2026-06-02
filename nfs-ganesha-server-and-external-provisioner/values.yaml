@@ -19,8 +19,10 @@ extraArgs: {}
   # grace-period: 0
 
 service:
-  type: ClusterIP
-
+  #type: ClusterIP
+  type: NodePort
+  nodePort: 32008
+  # We can use this port to remotely access the pv of the nfs server.
   nfsPort: 2049
   nlockmgrPort: 32803
   mountdPort: 20048
